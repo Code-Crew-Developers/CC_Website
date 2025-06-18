@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Specify your Node version
+          node-version: '20'  
 
       - name: Install dependencies
         run: npm install
@@ -27,11 +27,11 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy 
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          publish_branch: gh-pages  # Explicitly set branch
-          force_orphan: true  # Clean deployment
-          keep_files: false   # Remove old files
+          publish_branch: gh-pages  
+          force_orphan: true  
+          keep_files: false   
